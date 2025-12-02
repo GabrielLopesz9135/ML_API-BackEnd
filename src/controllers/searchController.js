@@ -4,7 +4,7 @@ exports.searchProducts = async (req, res) => {
     try {
         const { termoPesquisado, limit, precoMinimo, precoMaximo } = req.query;
 
-        let apiURL = 'https://fakestoreapi.com/products';
+        let apiURL = 'https://fakestoreapi.in/api/products';
 
         if (termoPesquisado && termoPesquisado.trim() !== '') {
             apiURL = `https://fakestoreapi.com/products/category/${termoPesquisado.trim().toLowerCase()}`;
